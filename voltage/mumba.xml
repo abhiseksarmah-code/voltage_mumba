@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  VoltageOS 17 local manifest for Motorola G57 Power (mumba).
+  Copy to .repo/local_manifests/mumba.xml inside a VoltageOS 17 source tree,
+  then run `repo sync`. build.sh does this for you.
+-->
+<manifest>
+  <remote name="voltage_mumba" fetch="https://github.com/abhiseksarmah-code" />
+  <remote name="moto-elysia" fetch="https://github.com/moto-elysia" />
+
+  <!-- Device tree (VoltageOS port) -->
+  <project path="device/motorola/mumba"
+           name="voltage_mumba"
+           remote="voltage_mumba"
+           revision="main" />
+
+  <!-- Prebuilt kernel, DTBs and modules -->
+  <project path="device/motorola/mumba-kernel"
+           name="android_device_motorola_mumba-kernel"
+           remote="moto-elysia"
+           revision="main"
+           clone-depth="1" />
+
+  <!-- Motorola common hardware (MotoActions, Dolby, eSIM, sepolicy) -->
+  <project path="hardware/motorola"
+           name="android_hardware_motorola"
+           remote="moto-elysia"
+           revision="lineage-24.0" />
+
+  <!-- Proprietary vendor blobs -->
+  <project path="vendor/motorola/mumba"
+           name="android_vendor_motorola_mumba"
+           remote="moto-elysia"
+           revision="lineage-24.0"
+           clone-depth="1" />
+
+  <project path="vendor/motorola/mumba-motcamera"
+           name="android_vendor_motorola_mumba-motcamera"
+           remote="moto-elysia"
+           revision="main"
+           clone-depth="1" />
+</manifest>

@@ -10,10 +10,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from mumba device
 $(call inherit-product, device/motorola/mumba/device.mk)
 
-# Inherit some common CloverAOSP stuff.
-$(call inherit-product, vendor/clover/config/common_full_phone.mk)
+# Inherit some common VoltageOS stuff.
+$(call inherit-product, vendor/voltage/config/common_full_phone.mk)
 
-PRODUCT_NAME := clover_mumba
+PRODUCT_NAME := voltage_mumba
 PRODUCT_DEVICE := mumba
 PRODUCT_MANUFACTURER := motorola
 PRODUCT_BRAND := Motorola
@@ -29,9 +29,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     SystemDevice=mumba \
     SystemName=mumba
 
-# Clover assortment
-CLOVER_MAINTAINER := HoShinoKaw
-CLOVER_BUILDTYPE := UNOFFICIAL
+# VoltageOS flags
+VOLTAGE_BUILD_TYPE := UNOFFICIAL
+TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_ENABLE_BLUR := true
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_FACE_UNLOCK_SUPPORTED := true

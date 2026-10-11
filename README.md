@@ -1,4 +1,6 @@
 Device configuration for Motorola G57 Power and Motorola G100S (china)
+
+> **VoltageOS 17 port.** Build and flash instructions: [voltage/BUILDING.md](voltage/BUILDING.md)
 =========================================
 
 The Motorola G57 Power and Motorola G100S(CN) (codenamed _"mumba"_) are mid-range smartphone from Motorola announced and released in December 2025.
